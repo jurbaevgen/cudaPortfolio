@@ -1,0 +1,395 @@
+/*-------------------------------------*/
+/*  Сброс стандартных стилей браузера  */
+/*-------------------------------------*/
+
+
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Titillium Web', sans-serif;
+    color: white;
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #3bb8e4;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+}
+
+
+/*---------------------*/
+/*  Разметка страницы  */
+/*---------------------*/
+
+
+body > * {
+    min-width: 1140px;
+}
+
+.container {
+    padding: 55px 20px;
+    margin: 0 auto;
+    width: 1140px;
+}
+
+.container > h2 {
+    position: relative;
+    text-align: center;
+    line-height: 70px;
+    font-size: 40px;
+    text-transform: uppercase;
+    margin: 42px 0 22px 0; 
+} 
+
+.container > h2::after {
+    content: '';
+    display: block;
+    height: 5px;
+    width: 85px;
+    background-color: rgba(0,0,0, .15);
+    border-radius: 4px;
+    position: absolute;
+    margin-left: -42.5px;
+    left: 50%;
+    bottom: -5px;
+}
+
+.container p {
+    line-height: 26px;
+    text-align: center;
+}
+
+.row {
+    margin: 0 -10px;
+    overflow: hidden;
+}
+
+.row > .col-1, .row > .col-2, .row > .col-3, .row > .col-4 {
+    padding: 0 10px;
+    display: block;
+    float: left;
+}
+
+.col-1 {
+    width: 25%;
+}
+
+.col-2 {
+    width: 50%;
+}
+
+.col-3 {
+    width: 75%;
+}
+
+.col-4 {
+    width: 100%;
+}
+
+.panel {
+    padding: 75px 30px 70px;
+}
+
+.panel .icon {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.panel .photo {
+    text-align: center;
+    margin-bottom: 35px;
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    overflow: hidden;
+    background-color: gray;
+}
+
+.panel .social {
+    text-align: center;
+    font-size: 0;
+    margin-top: 30px;
+}
+
+.panel .social li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.panel .social a {
+    display: inline-block;
+    background-color: #bed1df;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.panel .social a:hover {
+    color: #bed1df;
+    background-color: #fff;
+}
+
+.panel .social span {
+    font-size: 14px;
+    line-height: 32px;
+}
+
+.panel h3 {
+    font-size: 18px;
+    line-height: 60px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.panel h3.name {
+    color: #282a3f;
+}
+
+.panel .position {
+    color: #2bbbef;
+    font-size: 14px;
+    text-align: center;
+    margin-top: -15px;
+    margin-bottom: 20px;
+}
+
+.panel .progress {
+    width: 160px;
+    height: 160px;
+    margin: 0 auto;
+    line-height: 130px;
+    border-radius: 50%;
+    background-color: #fff;
+    border-width: 15px;
+    border-style: solid;
+    font-size: 40px;
+    text-align: center;
+    transform: rotate(-45deg);
+}
+
+.panel .progress.blue {
+    border-color: #30bae8;
+    
+}
+
+.panel .progress.pink {
+    border-color: #d74681;
+}
+
+.panel .progress.green {
+    border-color: #15c6a9;
+}
+
+.panel .progress.orange {
+    border-color: #eb7d4a;
+}
+
+.panel .progress.p-75 {
+    border-top-color: #dceaed;
+}
+
+.panel .progress.p-50 {
+    border-top-color: #dceaed;
+    border-left-color: #dceaed;
+}
+
+.panel .progress.p-25 {
+    border-top-color: #dceaed;
+    border-left-color: #dceaed;
+    border-bottom-color: #dceaed;
+}
+
+.panel .p-25::before {
+    display: inline-block;
+    transform: rotate(45deg);
+    content: "25%"
+}
+
+.panel .p-50::before {
+    display: inline-block;
+    transform: rotate(45deg);
+    content: "50%"
+}
+
+.panel .p-75::before {
+    display: inline-block;
+    transform: rotate(45deg);
+    content: "75%"
+}
+
+.panel .p-100::before {
+    display: inline-block;
+    transform: rotate(45deg);
+    content: "100%"
+}
+
+.panel .progress span {
+    
+}
+
+
+/*--------------------*/
+/*  Глобальные стили  */
+/*--------------------*/
+
+.button {
+    display: inline-block;
+    text-transform: uppercase;
+    border-radius: 4px;
+    padding: 0 16px;
+    line-height: 32px;
+    font-size: 16px;
+}
+
+.button:hover {
+    color: white;
+}
+
+.button.big {
+    display: inline-block;
+    padding: 0 80px;
+    line-height: 62px;
+    font-size: 18px;
+}
+
+.button.big:hover {
+    border-width: 4px 0 2px 0;
+}
+
+.button.big:active {
+    border-width: 6px 0 0px 0;
+}
+
+.button.purple { }
+
+.button.purple:hover {
+    background-color: #643a79;
+}
+
+.button.brown {
+    color: #3b4963;
+    background-color: #ebc884;
+}
+
+.button.brown:hover, .button.brown.active {
+    background-color: #fff;
+}
+
+.button.orange {
+    background-color: #eb7d4a;
+    border-width: 3px 0;
+    border-style: solid;
+    border-top-color: #eb7d4a;
+    border-bottom-color: #ca6a3a;
+}
+
+.button.green {
+    background-color: #17c1a4;
+    border-width: 3px 0;
+    border-style: solid;
+    border-top-color: #17c1a4;
+    border-bottom-color: #15a58c;
+}
+
+.big-button-container {
+    text-align: center;
+    margin: 52px 0 90px 0;
+}
+
+/*----------------*/
+/*  Стили блоков  */
+/*----------------*/
+
+.header {
+    background-color: #86509c;
+}
+
+.nav-bar {
+    height: 42px;
+    padding: 0 6px;
+}
+
+.logo {
+    display: inline-block;
+    padding: 0 32px;
+}
+
+.navigation {
+    float: right;
+    padding: 4px 0;
+}
+
+.navigation > li {
+    display: inline-block;
+    padding-right: 10px;
+}
+
+.navigation > li:last-child {
+    padding-right: 0;
+}
+
+.navigation > li > a {
+    display: inline-block;
+}
+
+.navigation > li > a:hover {
+}
+
+.header .greeting {
+    font-weight: bold;
+    font-size: 42px;
+    margin-top: 132px;
+    text-align: center;
+}
+
+.header .greeting > p {
+    line-height: 50px;
+}
+
+.services {
+    background-color: #17c1a4;
+}
+
+.team {
+    color: #3b4963;
+    background-color: #e7f2f8;
+}
+
+.skills {
+    color: #3b4963;
+    background-color: #fff;
+}
+
+.porfolio {
+    color: #3b4963;
+    background-color: #ffdc98;
+}
+
+.porfolio .filter {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.porfolio .filter li {
+    display: inline-block;
+}
